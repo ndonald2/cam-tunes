@@ -1,0 +1,6 @@
+[submodule "External/GPUImage"]
+	path = External/GPUImage
+	url = https://github.com/BradLarson/GPUImage.git
+[submodule "External/Tonic"]
+	path = External/Tonic
+	url = git@github.com:TonicAudio/Tonic.git
