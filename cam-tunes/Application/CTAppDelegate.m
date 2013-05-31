@@ -7,7 +7,7 @@
 //
 
 #import "CTAppDelegate.h"
-
+#import "CTVideoStreamViewController.h"
 
 @implementation CTAppDelegate
 
@@ -16,7 +16,8 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     
     // View controller goes here
-    
+    CTVideoStreamViewController *vidVC = [[CTVideoStreamViewController alloc] initWithNibName:nil bundle:nil];
+    [self.window setRootViewController:vidVC];
     [self.window makeKeyAndVisible];
     return YES;
 }

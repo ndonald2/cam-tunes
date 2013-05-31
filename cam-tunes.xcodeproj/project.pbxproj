@@ -17,34 +17,19 @@
 		9A35289D1758E5720009F78B /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A3528961758E5720009F78B /* Default@2x.png */; };
 		9A35289F1758E5920009F78B /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A35289E1758E5920009F78B /* AudioToolbox.framework */; };
 		9A3528A11758E59A0009F78B /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A3528A01758E59A0009F78B /* Accelerate.framework */; };
-		9A3528AF1758E6000009F78B /* libGPUImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A3528AA1758E5EE0009F78B /* libGPUImage.a */; };
 		9A3528BC1758E6850009F78B /* TonicSynthManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9A3528BB1758E6850009F78B /* TonicSynthManager.mm */; };
 		9A3528BF1758E6990009F78B /* Novocaine.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A3528BE1758E6990009F78B /* Novocaine.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		9A3529731758E7230009F78B /* libTonic-iOS-Debug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A3529701758E70A0009F78B /* libTonic-iOS-Debug.a */; };
+		9A35298B1758F8C90009F78B /* SimpleVideoFrameMetrics.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A3529881758F8C90009F78B /* SimpleVideoFrameMetrics.m */; };
+		9A35298C1758F8C90009F78B /* SimpleVideoCapture.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A35298A1758F8C90009F78B /* SimpleVideoCapture.m */; };
+		9A3529901758F8EE0009F78B /* CSColorUtils.c in Sources */ = {isa = PBXBuildFile; fileRef = 9A35298E1758F8EE0009F78B /* CSColorUtils.c */; };
+		9A3529931758F9380009F78B /* CTVideoStreamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A3529921758F9380009F78B /* CTVideoStreamViewController.m */; };
+		9A3529951758FABF0009F78B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A3529941758FABF0009F78B /* AVFoundation.framework */; };
+		9A3529971758FAD10009F78B /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A3529961758FAD10009F78B /* CoreVideo.framework */; };
+		9A3529991758FADF0009F78B /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A3529981758FADF0009F78B /* CoreMedia.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		9A3528A91758E5EE0009F78B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9A3528A31758E5ED0009F78B /* GPUImage.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = BCF1A33414DDB1EC00852800;
-			remoteInfo = GPUImage;
-		};
-		9A3528AB1758E5EE0009F78B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9A3528A31758E5ED0009F78B /* GPUImage.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = BCF1A34414DDB1EC00852800;
-			remoteInfo = GPUImageTests;
-		};
-		9A3528AD1758E5FB0009F78B /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9A3528A31758E5ED0009F78B /* GPUImage.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = BCF1A33314DDB1EC00852800;
-			remoteInfo = GPUImage;
-		};
 		9A35296D1758E70A0009F78B /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9A3529681758E70A0009F78B /* TonicLib.xcodeproj */;
@@ -83,13 +68,23 @@
 		9A3528961758E5720009F78B /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		9A35289E1758E5920009F78B /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		9A3528A01758E59A0009F78B /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
-		9A3528A31758E5ED0009F78B /* GPUImage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GPUImage.xcodeproj; path = GPUImage/framework/GPUImage.xcodeproj; sourceTree = "<group>"; };
 		9A3528BA1758E6850009F78B /* TonicSynthManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TonicSynthManager.h; path = "Tonic/TonicWrappers/Obj-C/TonicSynthManager.h"; sourceTree = "<group>"; };
 		9A3528BB1758E6850009F78B /* TonicSynthManager.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = TonicSynthManager.mm; path = "Tonic/TonicWrappers/Obj-C/TonicSynthManager.mm"; sourceTree = "<group>"; };
 		9A3528BD1758E6990009F78B /* Novocaine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Novocaine.h; path = Tonic/Demo/iOS/TonicDemo/TonicDemo/Novocaine/Novocaine.h; sourceTree = "<group>"; };
 		9A3528BE1758E6990009F78B /* Novocaine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Novocaine.m; path = Tonic/Demo/iOS/TonicDemo/TonicDemo/Novocaine/Novocaine.m; sourceTree = "<group>"; };
 		9A3529681758E70A0009F78B /* TonicLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TonicLib.xcodeproj; path = Tonic/lib/TonicLib.xcodeproj; sourceTree = "<group>"; };
 		9A3529741758E72C0009F78B /* Tonic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Tonic.h; path = Tonic/src/Tonic.h; sourceTree = "<group>"; };
+		9A3529871758F8C90009F78B /* SimpleVideoFrameMetrics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleVideoFrameMetrics.h; sourceTree = "<group>"; };
+		9A3529881758F8C90009F78B /* SimpleVideoFrameMetrics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleVideoFrameMetrics.m; sourceTree = "<group>"; };
+		9A3529891758F8C90009F78B /* SimpleVideoCapture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleVideoCapture.h; sourceTree = "<group>"; };
+		9A35298A1758F8C90009F78B /* SimpleVideoCapture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleVideoCapture.m; sourceTree = "<group>"; };
+		9A35298E1758F8EE0009F78B /* CSColorUtils.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = CSColorUtils.c; sourceTree = "<group>"; };
+		9A35298F1758F8EE0009F78B /* CSColorUtils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CSColorUtils.h; sourceTree = "<group>"; };
+		9A3529911758F9380009F78B /* CTVideoStreamViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTVideoStreamViewController.h; sourceTree = "<group>"; };
+		9A3529921758F9380009F78B /* CTVideoStreamViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTVideoStreamViewController.m; sourceTree = "<group>"; };
+		9A3529941758FABF0009F78B /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		9A3529961758FAD10009F78B /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
+		9A3529981758FADF0009F78B /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +92,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A3529991758FADF0009F78B /* CoreMedia.framework in Frameworks */,
+				9A3529971758FAD10009F78B /* CoreVideo.framework in Frameworks */,
+				9A3529951758FABF0009F78B /* AVFoundation.framework in Frameworks */,
 				9A3529731758E7230009F78B /* libTonic-iOS-Debug.a in Frameworks */,
-				9A3528AF1758E6000009F78B /* libGPUImage.a in Frameworks */,
 				9A3528A11758E59A0009F78B /* Accelerate.framework in Frameworks */,
 				9A35289F1758E5920009F78B /* AudioToolbox.framework in Frameworks */,
 				9A3528661758E3CB0009F78B /* UIKit.framework in Frameworks */,
@@ -131,6 +128,9 @@
 		9A3528641758E3CB0009F78B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9A3529981758FADF0009F78B /* CoreMedia.framework */,
+				9A3529961758FAD10009F78B /* CoreVideo.framework */,
+				9A3529941758FABF0009F78B /* AVFoundation.framework */,
 				9A3528A01758E59A0009F78B /* Accelerate.framework */,
 				9A35289E1758E5920009F78B /* AudioToolbox.framework */,
 				9A3528651758E3CB0009F78B /* UIKit.framework */,
@@ -144,7 +144,6 @@
 			isa = PBXGroup;
 			children = (
 				9A3528B01758E66C0009F78B /* Tonic */,
-				9A3528A21758E5E80009F78B /* GPUImage */,
 			);
 			path = External;
 			sourceTree = "<group>";
@@ -155,6 +154,8 @@
 				9A35288A1758E5710009F78B /* Application */,
 				9A35288D1758E5710009F78B /* Other Sources */,
 				9A3528901758E5710009F78B /* Resources */,
+				9A35298D1758F8EE0009F78B /* Utilities */,
+				9A3529861758F8C90009F78B /* Video */,
 				9A3528971758E5720009F78B /* View Controllers */,
 			);
 			path = "cam-tunes";
@@ -208,25 +209,10 @@
 		9A3528971758E5720009F78B /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				9A3529911758F9380009F78B /* CTVideoStreamViewController.h */,
+				9A3529921758F9380009F78B /* CTVideoStreamViewController.m */,
 			);
 			path = "View Controllers";
-			sourceTree = "<group>";
-		};
-		9A3528A21758E5E80009F78B /* GPUImage */ = {
-			isa = PBXGroup;
-			children = (
-				9A3528A31758E5ED0009F78B /* GPUImage.xcodeproj */,
-			);
-			name = GPUImage;
-			sourceTree = "<group>";
-		};
-		9A3528A41758E5ED0009F78B /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				9A3528AA1758E5EE0009F78B /* libGPUImage.a */,
-				9A3528AC1758E5EE0009F78B /* GPUImageTests.octest */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		9A3528B01758E66C0009F78B /* Tonic */ = {
@@ -251,6 +237,26 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		9A3529861758F8C90009F78B /* Video */ = {
+			isa = PBXGroup;
+			children = (
+				9A3529871758F8C90009F78B /* SimpleVideoFrameMetrics.h */,
+				9A3529881758F8C90009F78B /* SimpleVideoFrameMetrics.m */,
+				9A3529891758F8C90009F78B /* SimpleVideoCapture.h */,
+				9A35298A1758F8C90009F78B /* SimpleVideoCapture.m */,
+			);
+			path = Video;
+			sourceTree = "<group>";
+		};
+		9A35298D1758F8EE0009F78B /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				9A35298F1758F8EE0009F78B /* CSColorUtils.h */,
+				9A35298E1758F8EE0009F78B /* CSColorUtils.c */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -266,7 +272,6 @@
 			);
 			dependencies = (
 				9A3529721758E7200009F78B /* PBXTargetDependency */,
-				9A3528AE1758E5FB0009F78B /* PBXTargetDependency */,
 			);
 			name = "cam-tunes";
 			productName = "cam-tunes";
@@ -295,10 +300,6 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 9A3528A41758E5ED0009F78B /* Products */;
-					ProjectRef = 9A3528A31758E5ED0009F78B /* GPUImage.xcodeproj */;
-				},
-				{
 					ProductGroup = 9A3529691758E70A0009F78B /* Products */;
 					ProjectRef = 9A3529681758E70A0009F78B /* TonicLib.xcodeproj */;
 				},
@@ -311,20 +312,6 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		9A3528AA1758E5EE0009F78B /* libGPUImage.a */ = {
-			isa = PBXReferenceProxy;
-			fileType = archive.ar;
-			path = libGPUImage.a;
-			remoteRef = 9A3528A91758E5EE0009F78B /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		9A3528AC1758E5EE0009F78B /* GPUImageTests.octest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = GPUImageTests.octest;
-			remoteRef = 9A3528AB1758E5EE0009F78B /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
 		9A35296E1758E70A0009F78B /* libTonic-OSX-Debug.a */ = {
 			isa = PBXReferenceProxy;
 			fileType = archive.ar;
@@ -363,17 +350,16 @@
 				9A3528991758E5720009F78B /* main.m in Sources */,
 				9A3528BC1758E6850009F78B /* TonicSynthManager.mm in Sources */,
 				9A3528BF1758E6990009F78B /* Novocaine.m in Sources */,
+				9A35298B1758F8C90009F78B /* SimpleVideoFrameMetrics.m in Sources */,
+				9A35298C1758F8C90009F78B /* SimpleVideoCapture.m in Sources */,
+				9A3529901758F8EE0009F78B /* CSColorUtils.c in Sources */,
+				9A3529931758F9380009F78B /* CTVideoStreamViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		9A3528AE1758E5FB0009F78B /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = GPUImage;
-			targetProxy = 9A3528AD1758E5FB0009F78B /* PBXContainerItemProxy */;
-		};
 		9A3529721758E7200009F78B /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Tonic-iOS";
