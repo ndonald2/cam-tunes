@@ -8,6 +8,7 @@
 
 #import "CTAppDelegate.h"
 #import "CTVideoStreamViewController.h"
+#import "TonicSynthManager.h"
 
 @implementation CTAppDelegate
 
@@ -24,7 +25,7 @@
 
 - (void)applicationWillResignActive:(UIApplication *)application
 {
-
+    [[TonicSynthManager sharedManager] endSession];
 }
 
 - (void)applicationDidEnterBackground:(UIApplication *)application
@@ -39,7 +40,7 @@
 
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
-
+    [[TonicSynthManager sharedManager] startSession];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application

@@ -7,9 +7,15 @@
 //
 
 #import "CTVideoStreamViewController.h"
+#import "TonicSynthManager.h"
 #import "GPUImage.h"
 
+using namespace Tonic;
+
 @interface CTVideoStreamViewController ()
+{
+    Synth synth;
+}
 
 @property (nonatomic, strong) GPUImageVideoCamera *videoCamera;
 @property (nonatomic, strong) GPUImageView *videoOutputView;
@@ -18,13 +24,20 @@
 
 @implementation CTVideoStreamViewController
 
+- (void)dealloc
+{
+    [[TonicSynthManager sharedManager] removeSynthForKey:@"camsynth"];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
     [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationNone];
     
-    self.videoCamera = [[GPUImageVideoCamera alloc] initWithSessionPreset:AVCaptureSessionPreset640x480 cameraPosition:AVCaptureDevicePositionBack];
+    self.videoCamera = [[GPUImageVideoCamera alloc] initWithSessionPreset:AVCaptureSessionPreset640x480
+                                                           cameraPosition:AVCaptureDevicePositionBack];
+    
     self.videoCamera.outputImageOrientation = UIInterfaceOrientationPortrait;
     
     self.videoOutputView = [[GPUImageView alloc] initWithFrame:self.view.bounds];
@@ -32,12 +45,12 @@
     self.videoOutputView.fillMode = kGPUImageFillModePreserveAspectRatioAndFill;
     [self.view addSubview:self.videoOutputView];
     
-//    GPUImageLuminosity *luminosity = [[GPUImageLuminosity alloc] init];
-//    [luminosity setLuminosityProcessingFinishedBlock:^(CGFloat luminosity, CMTime time) {
-//        
-//    }];
-//    
-//    [self.videoCamera addTarget:luminosity];
+    GPUImageLuminosity *luminosity = [[GPUImageLuminosity alloc] init];
+    [luminosity setLuminosityProcessingFinishedBlock:^(CGFloat luminosity, CMTime time) {
+        
+    }];
+    
+    [self.videoCamera addTarget:luminosity];
     
 //    GPUImagePolkaDotFilter *dotFilter = [[GPUImagePolkaDotFilter alloc] init];
 //    
@@ -47,6 +60,11 @@
     [self.videoCamera addTarget:self.videoOutputView];
     
     [self.videoCamera startCameraCapture];
+    
+    // ---- add synth ----
+    
+    synth = SynthFactory::createInstance("CamTuneSynth");
+    [[TonicSynthManager sharedManager] addSynth:synth forKey:@"camsynth"];
 }
 
 - (void)viewDidLayoutSubviews

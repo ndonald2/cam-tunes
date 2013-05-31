@@ -10,7 +10,7 @@
 		9A3528661758E3CB0009F78B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A3528651758E3CB0009F78B /* UIKit.framework */; };
 		9A3528681758E3CB0009F78B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A3528671758E3CB0009F78B /* Foundation.framework */; };
 		9A35286A1758E3CB0009F78B /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A3528691758E3CB0009F78B /* CoreGraphics.framework */; };
-		9A3528981758E5720009F78B /* CTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A35288C1758E5710009F78B /* CTAppDelegate.m */; };
+		9A3528981758E5720009F78B /* CTAppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9A35288C1758E5710009F78B /* CTAppDelegate.mm */; };
 		9A3528991758E5720009F78B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A35288F1758E5710009F78B /* main.m */; };
 		9A35289B1758E5720009F78B /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A3528941758E5720009F78B /* Default-568h@2x.png */; };
 		9A35289C1758E5720009F78B /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 9A3528951758E5720009F78B /* Default.png */; };
@@ -20,13 +20,14 @@
 		9A3528BC1758E6850009F78B /* TonicSynthManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9A3528BB1758E6850009F78B /* TonicSynthManager.mm */; };
 		9A3528BF1758E6990009F78B /* Novocaine.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A3528BE1758E6990009F78B /* Novocaine.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		9A3529731758E7230009F78B /* libTonic-iOS-Debug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A3529701758E70A0009F78B /* libTonic-iOS-Debug.a */; };
-		9A3529931758F9380009F78B /* CTVideoStreamViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A3529921758F9380009F78B /* CTVideoStreamViewController.m */; };
+		9A3529931758F9380009F78B /* CTVideoStreamViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9A3529921758F9380009F78B /* CTVideoStreamViewController.mm */; };
 		9A3529951758FABF0009F78B /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A3529941758FABF0009F78B /* AVFoundation.framework */; };
 		9A3529971758FAD10009F78B /* CoreVideo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A3529961758FAD10009F78B /* CoreVideo.framework */; };
 		9A3529991758FADF0009F78B /* CoreMedia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A3529981758FADF0009F78B /* CoreMedia.framework */; };
 		9AD452991758FF58007D7770 /* libGPUImage.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AD452941758FF48007D7770 /* libGPUImage.a */; };
 		9AD4529C1758FFB3007D7770 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AD4529B1758FFB3007D7770 /* OpenGLES.framework */; };
 		9AD4529E1758FFBC007D7770 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AD4529D1758FFBC007D7770 /* QuartzCore.framework */; };
+		9AD452AD1759103A007D7770 /* CamTuneSynth.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9AD452AB1759101C007D7770 /* CamTuneSynth.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,7 +81,7 @@
 		9A3528671758E3CB0009F78B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		9A3528691758E3CB0009F78B /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		9A35288B1758E5710009F78B /* CTAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTAppDelegate.h; sourceTree = "<group>"; };
-		9A35288C1758E5710009F78B /* CTAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTAppDelegate.m; sourceTree = "<group>"; };
+		9A35288C1758E5710009F78B /* CTAppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CTAppDelegate.mm; sourceTree = "<group>"; };
 		9A35288E1758E5710009F78B /* cam-tunes-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "cam-tunes-Prefix.pch"; sourceTree = "<group>"; };
 		9A35288F1758E5710009F78B /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		9A3528911758E5720009F78B /* cam-tunes-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "cam-tunes-Info.plist"; sourceTree = "<group>"; };
@@ -96,13 +97,14 @@
 		9A3529681758E70A0009F78B /* TonicLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = TonicLib.xcodeproj; path = Tonic/lib/TonicLib.xcodeproj; sourceTree = "<group>"; };
 		9A3529741758E72C0009F78B /* Tonic.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = Tonic.h; path = Tonic/src/Tonic.h; sourceTree = "<group>"; };
 		9A3529911758F9380009F78B /* CTVideoStreamViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTVideoStreamViewController.h; sourceTree = "<group>"; };
-		9A3529921758F9380009F78B /* CTVideoStreamViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTVideoStreamViewController.m; sourceTree = "<group>"; };
+		9A3529921758F9380009F78B /* CTVideoStreamViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = CTVideoStreamViewController.mm; sourceTree = "<group>"; };
 		9A3529941758FABF0009F78B /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		9A3529961758FAD10009F78B /* CoreVideo.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreVideo.framework; path = System/Library/Frameworks/CoreVideo.framework; sourceTree = SDKROOT; };
 		9A3529981758FADF0009F78B /* CoreMedia.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMedia.framework; path = System/Library/Frameworks/CoreMedia.framework; sourceTree = SDKROOT; };
 		9AD4528D1758FF48007D7770 /* GPUImage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GPUImage.xcodeproj; path = GPUImage/framework/GPUImage.xcodeproj; sourceTree = "<group>"; };
 		9AD4529B1758FFB3007D7770 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		9AD4529D1758FFBC007D7770 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		9AD452AB1759101C007D7770 /* CamTuneSynth.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CamTuneSynth.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -176,6 +178,7 @@
 			isa = PBXGroup;
 			children = (
 				9A35288A1758E5710009F78B /* Application */,
+				9AD452A717591002007D7770 /* Audio */,
 				9A35288D1758E5710009F78B /* Other Sources */,
 				9A3528901758E5710009F78B /* Resources */,
 				9A3528971758E5720009F78B /* View Controllers */,
@@ -187,7 +190,7 @@
 			isa = PBXGroup;
 			children = (
 				9A35288B1758E5710009F78B /* CTAppDelegate.h */,
-				9A35288C1758E5710009F78B /* CTAppDelegate.m */,
+				9A35288C1758E5710009F78B /* CTAppDelegate.mm */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -232,7 +235,7 @@
 			isa = PBXGroup;
 			children = (
 				9A3529911758F9380009F78B /* CTVideoStreamViewController.h */,
-				9A3529921758F9380009F78B /* CTVideoStreamViewController.m */,
+				9A3529921758F9380009F78B /* CTVideoStreamViewController.mm */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -266,6 +269,14 @@
 				9AD452961758FF48007D7770 /* GPUImageTests.octest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		9AD452A717591002007D7770 /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				9AD452AB1759101C007D7770 /* CamTuneSynth.cpp */,
+			);
+			path = Audio;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -376,11 +387,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9A3528981758E5720009F78B /* CTAppDelegate.m in Sources */,
+				9A3528981758E5720009F78B /* CTAppDelegate.mm in Sources */,
 				9A3528991758E5720009F78B /* main.m in Sources */,
 				9A3528BC1758E6850009F78B /* TonicSynthManager.mm in Sources */,
 				9A3528BF1758E6990009F78B /* Novocaine.m in Sources */,
-				9A3529931758F9380009F78B /* CTVideoStreamViewController.m in Sources */,
+				9A3529931758F9380009F78B /* CTVideoStreamViewController.mm in Sources */,
+				9AD452AD1759103A007D7770 /* CamTuneSynth.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
