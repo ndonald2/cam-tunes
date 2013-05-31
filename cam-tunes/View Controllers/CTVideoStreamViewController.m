@@ -7,43 +7,51 @@
 //
 
 #import "CTVideoStreamViewController.h"
-#import "SimpleVideoCapture.h"
-
-#import <AVFoundation/AVFoundation.h>
-
+#import "GPUImage.h"
 
 @interface CTVideoStreamViewController ()
 
-@property (nonatomic, strong) AVCaptureVideoPreviewLayer * vidLayer;
+@property (nonatomic, strong) GPUImageVideoCamera *videoCamera;
+@property (nonatomic, strong) GPUImageView *videoOutputView;
 
 @end
 
 @implementation CTVideoStreamViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-    }
-    return self;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
-    self.vidLayer = [[SimpleVideoCapture sharedInstance] createVideoPreviewLayer];
-    [self.view.layer setFrame:self.view.bounds];
-    [self.view.layer insertSublayer:self.vidLayer atIndex:0];
+    [[UIApplication sharedApplication] setStatusBarHidden:YES withAnimation:UIStatusBarAnimationNone];
     
-    // start right away for now
-    [[SimpleVideoCapture sharedInstance] startCapture];
+    self.videoCamera = [[GPUImageVideoCamera alloc] initWithSessionPreset:AVCaptureSessionPreset640x480 cameraPosition:AVCaptureDevicePositionBack];
+    self.videoCamera.outputImageOrientation = UIInterfaceOrientationPortrait;
+    
+    self.videoOutputView = [[GPUImageView alloc] initWithFrame:self.view.bounds];
+    self.videoOutputView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
+    self.videoOutputView.fillMode = kGPUImageFillModePreserveAspectRatioAndFill;
+    [self.view addSubview:self.videoOutputView];
+    
+//    GPUImageLuminosity *luminosity = [[GPUImageLuminosity alloc] init];
+//    [luminosity setLuminosityProcessingFinishedBlock:^(CGFloat luminosity, CMTime time) {
+//        
+//    }];
+//    
+//    [self.videoCamera addTarget:luminosity];
+    
+//    GPUImagePolkaDotFilter *dotFilter = [[GPUImagePolkaDotFilter alloc] init];
+//    
+//    [self.videoCamera addTarget:dotFilter];
+//    [dotFilter addTarget:self.videoOutputView];
+    
+    [self.videoCamera addTarget:self.videoOutputView];
+    
+    [self.videoCamera startCameraCapture];
 }
 
 - (void)viewDidLayoutSubviews
 {
     [super viewDidLayoutSubviews];
-    self.vidLayer.frame = self.view.bounds;
 }
 
 - (void)didReceiveMemoryWarning
